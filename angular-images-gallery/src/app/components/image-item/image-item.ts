@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy} from '@angular/core';
 import { Image } from '../../interfaces/image-interface';
 
 @Component({
@@ -6,6 +6,7 @@ import { Image } from '../../interfaces/image-interface';
   imports: [],
   templateUrl: './image-item.html',
   styleUrl: './image-item.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class ImageItem {
