@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Image } from '../../interfaces/image-interface';
+import { ImageItem } from '../image-item/image-item';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  imports: [ImageItem],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
