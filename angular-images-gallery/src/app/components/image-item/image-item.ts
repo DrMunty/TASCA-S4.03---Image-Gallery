@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Image } from '../../interfaces/image-interface';
 
 @Component({
   selector: 'app-image-item',
@@ -6,4 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './image-item.html',
   styleUrl: './image-item.css',
 })
-export class ImageItem {}
+
+export class ImageItem {
+  imageData = input.required<Image>();
+}
