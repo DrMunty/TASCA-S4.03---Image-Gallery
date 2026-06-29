@@ -1,2 +1,8 @@
-<h2>{{ imageData().id }}</h2>
+<div class = "image-card" [class.featured]="isFeatured()">
+<h2>
+  Image ID: {{ imageData().id }}
+  <br><br>
+  Image Description: {{imageData().alt}}
+</h2>
   <img [src]="imageData().src" [alt]="imageData().alt">
+</div>

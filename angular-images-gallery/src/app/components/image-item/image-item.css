@@ -1,0 +1,18 @@
+.image-card{
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: white;
+  max-width: 200px;
+}
+
+.image-card img {
+  border-radius: 4px;
+}
+
+.image-card.featured{
+  border: 4px solid #ff9800; 
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+  transform: scale(1.15);
+}
