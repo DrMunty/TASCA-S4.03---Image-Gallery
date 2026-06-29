@@ -1,5 +1,6 @@
 export interface Image{
     id: string,
     src: string,
-    alt: string
+    alt: string,
+    isFeatured?: boolean
 }
