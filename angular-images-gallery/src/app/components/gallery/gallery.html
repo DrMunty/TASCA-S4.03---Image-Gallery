@@ -1,0 +1,8 @@
+<ul>
+    @for (image of myGallery(); track image.id){
+        <li>
+          <app-image-item [imageData] = "image" [isFeatured]="$first"/>
+        </li>
+    }
+</ul>
+
