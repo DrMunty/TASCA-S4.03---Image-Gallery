@@ -15,7 +15,6 @@ export class Gallery {
       id: '1',
       src: 'https://picsum.photos/id/237/200/300',
       alt: 'A picture of a black dog',
-      isFeatured: true
     },
 
     {
@@ -65,7 +64,7 @@ export class Gallery {
       src: 'https://picsum.photos/id/742/200/300',
       alt: 'A picture of the statue of liberty'
     },
-    
+
     {
       id: '10',
       src: 'https://picsum.photos/id/832/200/300',
