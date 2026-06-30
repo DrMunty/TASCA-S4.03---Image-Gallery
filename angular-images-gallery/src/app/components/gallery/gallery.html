@@ -1,8 +1,6 @@
-<ul>
+<div class="max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-4 lg: grid-cols-5 gap-4 p-4">
     @for (image of myGallery(); track image.id){
-        <li>
-          <app-image-item [imageData] = "image" [isFeatured]="$first"/>
-        </li>
+          <app-image-item [imageData] = "image" [isFeatured]="$first" [class.lg:col-span-2]="$first" [class.lg:row-span-2]="$first"/>
     }
-</ul>
+</div>
 
