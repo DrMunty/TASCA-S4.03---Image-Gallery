@@ -1,11 +1,1 @@
-.image-card{
-  border: 2px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  background-color: white;
-}
 
-.image-card img {
-  border-radius: 4px;
-}
