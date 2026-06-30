@@ -1,8 +1,8 @@
 <div class = "image-card" [class.featured]="isFeatured()">
-<h2>
-  Image ID: {{ imageData().id }}
-  <br><br>
-  Image Description: {{imageData().alt}}
-</h2>
-  <img [src]="imageData().src" [alt]="imageData().alt">
+  <img [src]="imageData().src" 
+  [alt]="imageData().alt" 
+  width="300" 
+  height="300" 
+  class="w-full h-full object-cover block"
+  [attr.aria-label]=" 'Image number ' + imageData().id + ': ' + imageData().alt">
 </div>
