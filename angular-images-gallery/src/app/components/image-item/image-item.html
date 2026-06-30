@@ -1,3 +1,8 @@
 <div class = "image-card" [class.featured]="isFeatured()">
-  <img [src]="imageData().src" [alt]="imageData().alt" width="300" height="300" class="w-full h-full object-cover block">
+  <img [src]="imageData().src" 
+  [alt]="imageData().alt" 
+  width="300" 
+  height="300" 
+  class="w-full h-full object-cover block"
+  [attr.aria-label]=" 'Image number ' + imageData().id + ': ' + imageData().alt">
 </div>
