@@ -5,4 +5,10 @@
   height="300" 
   class="w-full h-full object-cover block"
   [attr.aria-label]=" 'Image number ' + imageData().id + ': ' + imageData().alt">
+  <button 
+  (click)="onDeleteClick($event)"
+  class = "absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white font-bold py-1 px-3 rounded text-xs shadow-md transition-colors cursor-pointer z-10"
+  [attr.aria-label]=" 'Delete image number ' + imageData().id"> 
+  Delete 
+</button>
 </div>
