@@ -3,16 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { Gallery } from './components/gallery/gallery';
 import { ButtonDirective } from 'primeng/button';
 
-@Component({
-    selector: 'button-demo',
-    template: `<button pButton>Check</button>`,
-    imports: [ButtonDirective]
-})
-export class ButtonDemo {}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Gallery, ButtonDemo],
+  imports: [RouterOutlet, Gallery],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
