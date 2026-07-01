@@ -76,7 +76,7 @@ export class Gallery {
   featuredImageId = signal<string>(this.myGallery()[0]?.id || "");
 
   removeImage(id: string): void {
-    if (window.confirm("Are you sure you want to delete this picture?" + id)){
+    if (window.confirm("Are you sure you want to delete this picture?" + ' ' + 'Number ' + id)){
       this.myGallery.update(currentImages => currentImages.filter(image => image.id !== id))
     }
   
