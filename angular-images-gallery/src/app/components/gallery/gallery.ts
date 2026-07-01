@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Image } from '../../interfaces/image-interface';
 import { ImageItem } from '../image-item/image-item';
+import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 @Component({
   selector: 'app-gallery',
-  imports: [ImageItem],
+  imports: [ImageItem, CdkDrag, CdkDropList, CdkDropListGroup],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })

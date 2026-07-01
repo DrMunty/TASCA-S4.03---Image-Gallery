@@ -1,5 +1,9 @@
-<div class="max-w-screen-md mx-auto grid grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 grid-flow-row-dense">
+<div 
+cdkDropList
+(cdkDropListDropped)= "drop($event)"
+class="max-w-screen-md mx-auto grid grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4 grid-flow-row-dense">
     @for (image of myGallery(); track image.id){
+      <div cdkDrag class="w-full h-full">
           <app-image-item 
           [imageData] = "image" 
           [isFeatured]= "image.id === featuredImageId()" 
@@ -7,6 +11,7 @@
           [class.lg:col-span-2]="$first" 
           [class.lg:row-span-2]="$first"
           (deleteImage)="removeImage(image.id)"/>
+      </div>
     }
 </div>
 
