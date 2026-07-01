@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { Image } from '../../interfaces/image-interface';
 import { ImageItem } from '../image-item/image-item';
-import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray, CdkDragDrop } from '@angular/cdk/drag-drop';
 
 
 @Component({
@@ -80,8 +80,13 @@ export class Gallery {
     if (window.confirm("Are you sure you want to delete this picture?" + ' ' + 'Number ' + id)){
       this.myGallery.update(currentImages => currentImages.filter(image => image.id !== id))
     }
-  
-  }
+  };
 
-}
+  drop(event: CdkDragDrop<Image[]>){
+    this.myGallery.update(currentImages => {moveItemInArray(currentImages, event.previousIndex, event.currentIndex);
+      return [...currentImages];
+    });
+    this.featuredImageId.set(this.myGallery()[0]?.id || '');
+  };
+};
 
