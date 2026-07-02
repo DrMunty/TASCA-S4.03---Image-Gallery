@@ -9,16 +9,15 @@
   
   <button 
     (click)="onDeleteClick($event)"
-    [attr.aria-label]="'Delete image number ' + imageData().id"> 
-    <i class="absolute top-2 right-2 transition-colors cursor-pointer z-10 
-    flex items-center justify-center pi pi-trash text-xs 
-    text-white hover:text-black
-    bg-gradient-to-r from-purple-500 to-pink-500
-    hover:bg-gradient-to-l
-    focus:ring-4 focus:outline-none focus:ring-purple-200
-    dark:focus:ring-purple-800
-    rounded-base
-    px-0.5 py-0.5 text-center leading-5">
+    [attr.aria-label]="'Delete image number ' + imageData().id"
+    class="absolute top-2 right-2 z-10 
+           w-5 h-5 flex items-center justify-center text-center
+           text-white hover:text-black
+           bg-gradient-to-r from-purple-500 to-pink-500
+           hover:bg-gradient-to-l
+           focus:ring-4 focus:outline-none focus:ring-purple-200
+           rounded-md cursor-pointer transition-colors shadow-md"> 
+    <i class="pi pi-trash text-xs shrink-0">
   </i>
   </button>
 </div>
