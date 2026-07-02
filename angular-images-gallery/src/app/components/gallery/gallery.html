@@ -1,4 +1,15 @@
-<div 
+<div>
+ @if (selectedImageIds().size > 0) {
+    <div class="flex justify-center mb-6 animate-fade-in">
+      <button 
+        (click)="deleteSelectedImages()"
+        class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5">
+        <i class="pi pi-trash"></i>
+        Delete Selected ({{ selectedImageIds().size }})
+      </button>
+    </div>
+  }
+  <div
 cdkDropList
 cdkDropListOrientation="mixed"
 (cdkDropListDropped)= "drop($event)"
@@ -14,9 +25,10 @@ class="max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ga
           [isSelected]="selectedImageIds().has(image.id)"
           class="w-full h-full flex" 
           (deleteImage)="removeImage(image.id)"
-          (deleteImage)="removeImage(image.id)"
           (selectImage)="toggleSelection(image.id)"/>
       </div>
     }
+    </div>
+
 </div>
 

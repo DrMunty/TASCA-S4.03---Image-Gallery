@@ -102,5 +102,20 @@ export class Gallery {
       return newSet;
     });
   };
+
+  deleteSelectedImages(): void {
+    if (window.confirm('Are you sure you want to delete all selected images?')){
+      this.myGallery.update(currentImages => 
+      currentImages.filter(image => !this.selectedImageIds().has(image.id))
+    );
+
+    this.selectedImageIds.update(set => {
+      set.clear();
+      return new Set(set);
+    });
+
+    this.featuredImageId.set(this.myGallery()[0]?.id || '');
+  }
+    }
 };
 
