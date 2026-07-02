@@ -88,5 +88,19 @@ export class Gallery {
     });
     this.featuredImageId.set(this.myGallery()[0]?.id || '');
   };
+
+  selectedImageIds = signal <Set<string>>(new Set ());
+
+  toggleSelection(id:string) {
+    this.selectedImageIds.update(currentIds => {
+      const newSet = new Set(currentIds);
+      if (newSet.has(id)) {
+        newSet.delete(id);
+      } else {
+        newSet.add(id);
+      }
+      return newSet;
+    });
+  };
 };
 

@@ -1,1 +1,6 @@
-
+.selected-border{
+  outline: 4px solid #a855f7;
+  outline-offset: -4px;       
+  transform: scale(0.98);     
+  transition: all 0.2s ease;
+}

@@ -1,4 +1,7 @@
-<div class="image-card w-full h-full relative flex flex-col" [class.featured]="isFeatured()">
+<div class="image-card w-full h-full relative flex flex-col" 
+[class.featured]="isFeatured()" 
+[class.selected-border]="isSelected()"
+(click)="onImageClick()">
   
   <img [src]="imageData().src" 
        [alt]="imageData().alt" 

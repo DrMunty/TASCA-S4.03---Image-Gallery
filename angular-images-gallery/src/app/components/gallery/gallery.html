@@ -10,9 +10,12 @@ class="max-w-screen-md mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 ga
       [class.lg:row-span-2]="image.id === featuredImageId()">
           <app-image-item 
           [imageData] = "image" 
-          [isFeatured]= "image.id === featuredImageId()" 
+          [isFeatured]= "image.id === featuredImageId()"
+          [isSelected]="selectedImageIds().has(image.id)"
           class="w-full h-full flex" 
-          (deleteImage)="removeImage(image.id)"/>
+          (deleteImage)="removeImage(image.id)"
+          (deleteImage)="removeImage(image.id)"
+          (selectImage)="toggleSelection(image.id)"/>
       </div>
     }
 </div>

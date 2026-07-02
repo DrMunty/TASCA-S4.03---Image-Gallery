@@ -14,6 +14,12 @@ export class ImageItem {
   imageData = input.required<Image>();
   isFeatured = input<boolean>(false);
   deleteImage = output<string>();
+  isSelected = input<boolean>(false);
+  selectImage = output<string>();
+
+  onImageClick(): void {
+    this.selectImage.emit(this.imageData().id);
+  }
 
   onDeleteClick(event: Event): void {
     event.stopPropagation();
