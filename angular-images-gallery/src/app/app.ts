@@ -1,8 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Gallery } from './components/gallery/gallery';
-import { ButtonDirective } from 'primeng/button';
-
 
 @Component({
   selector: 'app-root',

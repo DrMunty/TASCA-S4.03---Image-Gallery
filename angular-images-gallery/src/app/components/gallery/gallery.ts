@@ -80,6 +80,7 @@ export class Gallery {
     if (window.confirm("Are you sure you want to delete this picture?" + ' ' + 'Number ' + id)){
       this.myGallery.update(currentImages => currentImages.filter(image => image.id !== id))
     }
+    this.featuredImageId.set(this.myGallery()[0]?.id || '');
   };
 
   drop(event: CdkDragDrop<Image[]>){
